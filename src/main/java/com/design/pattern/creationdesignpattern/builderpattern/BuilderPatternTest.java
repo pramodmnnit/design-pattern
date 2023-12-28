@@ -1,4 +1,6 @@
-public class Main {
+package com.design.pattern.creationdesignpattern.builderpattern;
+
+public class BuilderPatternTest {
 
   public static void main(String[] args) {
     User user1 = new User.UserBuilder("Pramod", "Yadav").age(30)

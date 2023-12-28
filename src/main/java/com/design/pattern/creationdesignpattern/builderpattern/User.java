@@ -1,3 +1,5 @@
+package com.design.pattern.creationdesignpattern.builderpattern;
+
 public class User {
 
   private final String firstName;
@@ -16,7 +18,8 @@ public class User {
 
   @Override
   public String toString() {
-    return "User: "+this.firstName+", "+this.lastName+", "+this.age+", "+this.phone+", "+this.address;
+    return "User.java: " + this.firstName + ", " + this.lastName + ", " + this.age + ", "
+        + this.phone + ", " + this.address;
   }
 
   public static class UserBuilder {
