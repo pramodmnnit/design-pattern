@@ -5,8 +5,8 @@ public class CommandExecutorProxy implements CommandExecutor {
   private final CommandExecutor commandExecutor;
   private boolean isAdmin = false;
 
-  public CommandExecutorProxy(String username, String password){
-    if(username.equals("pramod") && password.equals("@12345")){
+  public CommandExecutorProxy(String username, String password) {
+    if (username.equals("pramod") && password.equals("@12345")) {
       isAdmin = true;
     }
     commandExecutor = new CommandExecutorImpl();
@@ -14,10 +14,10 @@ public class CommandExecutorProxy implements CommandExecutor {
 
   @Override
   public void runCommand(String command) throws Exception {
-    if(isAdmin){
+    if (isAdmin) {
       commandExecutor.runCommand(command);
     } else {
-      if(command.trim().startsWith("rm")){
+      if (command.trim().startsWith("rm")) {
         throw new Exception(command + " is not supported");
       } else {
         commandExecutor.runCommand(command);

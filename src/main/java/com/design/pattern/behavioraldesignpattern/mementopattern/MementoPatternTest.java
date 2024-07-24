@@ -1,8 +1,17 @@
 package com.design.pattern.behavioraldesignpattern.mementopattern;
 
+/**
+ * The Memento design pattern is a behavioral pattern that is used to capture and restore an
+ * object’s internal state without violating encapsulation. It allows you to save and restore the
+ * state of an object to a previous state, providing the ability to undo or roll back changes made
+ * to the object. As your application progresses, you may want to save checkpoints in your
+ * application and restore them to those checkpoints later. The intent of the Memento Design pattern
+ * is without violating encapsulation, to capture and externalize an object’s internal state so that
+ * the object can be restored to this state later.
+ */
 public class MementoPatternTest {
 
-  public static void main (String [] args){
+  public static void main(String[] args) {
     EmployeeCaretaker caretaker = new EmployeeCaretaker();
     System.out.println("creating employee objects with intial values");
     Employee racheal = new Employee(100);
@@ -55,6 +64,5 @@ public class MementoPatternTest {
     micheal.restore(michealMemento);
     System.out.println(racheal);
     System.out.println(micheal);
-
   }
 }

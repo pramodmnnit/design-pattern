@@ -1,4 +1,5 @@
 package com.design.pattern.behavioraldesignpattern.strategypattern;
+
 public class CreditCardPaymentStrategy implements PaymentStrategy {
 
   private final String name;
@@ -6,8 +7,8 @@ public class CreditCardPaymentStrategy implements PaymentStrategy {
   private final String cardNumber;
   private final String dateOfExpiry;
 
-  public CreditCardPaymentStrategy(String name, String cvv, String cardNumber,
-      String dateOfExpiry) {
+  public CreditCardPaymentStrategy(
+      String name, String cvv, String cardNumber, String dateOfExpiry) {
     this.name = name;
     this.cvv = cvv;
     this.cardNumber = cardNumber;

@@ -4,13 +4,13 @@ import java.sql.Connection;
 
 public class HelperFacade {
 
-  public static void generateReport(DBType dbType, ReportType reportType, String tableName){
+  public static void generateReport(DBType dbType, ReportType reportType, String tableName) {
     Connection con;
-    switch (dbType){
+    switch (dbType) {
       case MYSQL:
         con = MySqlHelper.getMysqlDBConnection();
         MySqlHelper mySqlHelper = new MySqlHelper();
-        switch(reportType){
+        switch (reportType) {
           case HTML:
             mySqlHelper.generateMySqlHtmlReport(tableName, con);
             break;
@@ -22,7 +22,7 @@ public class HelperFacade {
       case ORACLE:
         con = OracleHelper.getOracleDBConnection();
         OracleHelper oracleHelper = new OracleHelper();
-        switch(reportType){
+        switch (reportType) {
           case HTML:
             oracleHelper.generateOracleHtmlReport(tableName, con);
             break;
@@ -35,9 +35,12 @@ public class HelperFacade {
   }
 
   public enum DBType {
-    MYSQL, ORACLE
+    MYSQL,
+    ORACLE
   }
+
   public enum ReportType {
-    HTML, PDF
+    HTML,
+    PDF
   }
 }

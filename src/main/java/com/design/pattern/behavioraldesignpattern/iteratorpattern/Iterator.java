@@ -1,6 +1,7 @@
 package com.design.pattern.behavioraldesignpattern.iteratorpattern;
 
-public interface ChannelIterator {
+public interface Iterator {
   boolean hasNext();
-  Channel next();
+
+  Object next();
 }

@@ -1,7 +1,8 @@
 package com.design.pattern.structuraldesignpattern.flyweightpattern;
-public class ThickPen implements Pen{
 
-  private final BrushType brushType = BrushType.THICK;
+public class ThickPen implements Pen {
+
+  private static final BrushType brushType = BrushType.THICK;
   private String color = null;
 
   @Override

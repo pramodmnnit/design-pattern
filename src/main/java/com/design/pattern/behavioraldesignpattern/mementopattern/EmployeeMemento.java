@@ -1,4 +1,5 @@
 package com.design.pattern.behavioraldesignpattern.mementopattern;
+
 public class EmployeeMemento {
 
   private final int empId;
@@ -8,8 +9,8 @@ public class EmployeeMemento {
   private final String department;
   private final String project;
 
-  public EmployeeMemento(int empId, String name, String designation, Long salary, String department,
-      String project) {
+  public EmployeeMemento(
+      int empId, String name, String designation, Long salary, String department, String project) {
     this.empId = empId;
     this.name = name;
     this.designation = designation;
@@ -44,13 +45,23 @@ public class EmployeeMemento {
 
   @Override
   public String toString() {
-    return "EmployeeMemento{" +
-        "empId=" + empId +
-        ", name='" + name + '\'' +
-        ", designation='" + designation + '\'' +
-        ", salary=" + salary +
-        ", department='" + department + '\'' +
-        ", project='" + project + '\'' +
-        '}';
+    return "EmployeeMemento{"
+        + "empId="
+        + empId
+        + ", name='"
+        + name
+        + '\''
+        + ", designation='"
+        + designation
+        + '\''
+        + ", salary="
+        + salary
+        + ", department='"
+        + department
+        + '\''
+        + ", project='"
+        + project
+        + '\''
+        + '}';
   }
 }

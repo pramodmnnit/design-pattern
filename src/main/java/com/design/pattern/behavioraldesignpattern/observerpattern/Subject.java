@@ -2,9 +2,9 @@ package com.design.pattern.behavioraldesignpattern.observerpattern;
 
 public interface Subject {
 
-  void register(Observer observer);
-  void unregister(Observer observer);
-  void notifyObservers();
-  Object getUpdate();
+  void addObserver(Observer observer);
 
+  void removeObserver(Observer observer);
+
+  void notifyAllObservers();
 }

@@ -1,7 +1,8 @@
 package com.design.pattern.structuraldesignpattern.flyweightpattern;
+
 public class ThinPen implements Pen {
 
-  private final BrushType brushType = BrushType.THIN;
+  private static final BrushType brushType = BrushType.THIN;
   private String color = null;
 
   @Override

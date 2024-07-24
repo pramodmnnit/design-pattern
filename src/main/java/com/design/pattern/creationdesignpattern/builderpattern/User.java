@@ -8,7 +8,7 @@ public class User {
   private final String phone;
   private final String address;
 
-  public User(UserBuilder userBuilder) {
+  private User(UserBuilder userBuilder) {
     this.firstName = userBuilder.firstName;
     this.lastName = userBuilder.lastName;
     this.age = userBuilder.age;
@@ -18,8 +18,16 @@ public class User {
 
   @Override
   public String toString() {
-    return "User.java: " + this.firstName + ", " + this.lastName + ", " + this.age + ", "
-        + this.phone + ", " + this.address;
+    return "User.java: "
+        + this.firstName
+        + ", "
+        + this.lastName
+        + ", "
+        + this.age
+        + ", "
+        + this.phone
+        + ", "
+        + this.address;
   }
 
   public static class UserBuilder {

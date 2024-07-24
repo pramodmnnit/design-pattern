@@ -1,4 +1,5 @@
 package com.design.pattern.behavioraldesignpattern.nullobjectpattern;
+
 public class Rectangle implements Shape {
 
   @Override

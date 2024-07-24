@@ -13,5 +13,4 @@ public abstract class Game {
   protected abstract void startPlay();
 
   protected abstract void endPlay();
-
 }

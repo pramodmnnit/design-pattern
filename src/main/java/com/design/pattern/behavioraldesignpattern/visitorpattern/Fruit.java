@@ -1,11 +1,10 @@
 package com.design.pattern.behavioraldesignpattern.visitorpattern;
 
-public class Fruit implements ItemElement{
+public class Fruit implements ItemElement {
 
   private final Integer pricePerKg;
   private final Integer weight;
   private final String name;
-
 
   public Fruit(Integer pricePerKg, Integer weight, String name) {
     this.pricePerKg = pricePerKg;

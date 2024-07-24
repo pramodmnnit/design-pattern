@@ -13,7 +13,6 @@ public class Composite implements Component {
     this.name = name;
   }
 
-
   public void addComponent(Component component) {
     components.add(component);
   }

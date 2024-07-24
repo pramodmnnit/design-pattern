@@ -1,6 +1,6 @@
 package com.design.pattern.behavioraldesignpattern.nullobjectpattern;
 
-public class NullShape implements Shape{
+public class NullShape implements Shape {
 
   @Override
   public void draw() {

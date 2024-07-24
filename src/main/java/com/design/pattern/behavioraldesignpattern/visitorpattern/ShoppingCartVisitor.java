@@ -2,9 +2,7 @@ package com.design.pattern.behavioraldesignpattern.visitorpattern;
 
 public interface ShoppingCartVisitor {
 
+  int visit(Book book);
 
-  Integer visit(Book book);
-
-  Integer visit(Fruit fruit);
-
+  int visit(Fruit fruit);
 }

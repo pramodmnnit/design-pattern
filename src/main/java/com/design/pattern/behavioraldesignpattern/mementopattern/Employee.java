@@ -11,11 +11,11 @@ public class Employee {
   private String department;
   private String project;
 
-  public Employee(int empId){
-    this.empId =  empId;
+  public Employee(int empId) {
+    this.empId = empId;
   }
 
-  public int getEmpId(){
+  public int getEmpId() {
     return this.empId;
   }
 
@@ -61,24 +61,33 @@ public class Employee {
 
   @Override
   public String toString() {
-    return "Employee{" +
-        "empId=" + empId +
-        ", name='" + name + '\'' +
-        ", designation='" + designation + '\'' +
-        ", salary=" + salary +
-        ", department='" + department + '\'' +
-        ", project='" + project + '\'' +
-        '}';
+    return "Employee{"
+        + "empId="
+        + empId
+        + ", name='"
+        + name
+        + '\''
+        + ", designation='"
+        + designation
+        + '\''
+        + ", salary="
+        + salary
+        + ", department='"
+        + department
+        + '\''
+        + ", project='"
+        + project
+        + '\''
+        + '}';
   }
 
-  public EmployeeMemento createMemento(){
-    return new EmployeeMemento(this.empId, this.name,
-        this.designation, this.salary,
-        this.department, this.project);
+  public EmployeeMemento createMemento() {
+    return new EmployeeMemento(
+        this.empId, this.name, this.designation, this.salary, this.department, this.project);
   }
 
-  public void restore(EmployeeMemento employeeMemento){
-    if(Objects.isNull(employeeMemento)){
+  public void restore(EmployeeMemento employeeMemento) {
+    if (Objects.isNull(employeeMemento)) {
       throw new NullPointerException("Employee memento object is null");
     }
     this.department = employeeMemento.getDepartment();
@@ -87,5 +96,4 @@ public class Employee {
     this.project = employeeMemento.getProject();
     this.salary = employeeMemento.getSalary();
   }
-
 }

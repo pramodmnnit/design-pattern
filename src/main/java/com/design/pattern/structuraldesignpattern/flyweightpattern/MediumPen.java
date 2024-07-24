@@ -1,7 +1,8 @@
 package com.design.pattern.structuraldesignpattern.flyweightpattern;
+
 public class MediumPen implements Pen {
 
-  private final BrushType brushType = BrushType.MEDIUM;
+  private static final BrushType brushType = BrushType.MEDIUM;
   private String color = null;
 
   @Override

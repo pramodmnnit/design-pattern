@@ -1,5 +1,6 @@
 package com.design.pattern.structuraldesignpattern.bridgepattern;
-public class RedColor  extends Color{
+
+public class RedColor extends Color {
 
   @Override
   public void applyColor() {

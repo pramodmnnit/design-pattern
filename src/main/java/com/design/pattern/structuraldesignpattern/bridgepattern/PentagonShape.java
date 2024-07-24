@@ -1,5 +1,6 @@
 package com.design.pattern.structuraldesignpattern.bridgepattern;
-public class PentagonShape extends Shape{
+
+public class PentagonShape extends Shape {
 
   public PentagonShape(Color color) {
     super(color);
@@ -8,6 +9,6 @@ public class PentagonShape extends Shape{
   @Override
   public void applyColor() {
     System.out.print("Pentagon filled with color");
-  this.color.applyColor();
+    this.color.applyColor();
   }
 }

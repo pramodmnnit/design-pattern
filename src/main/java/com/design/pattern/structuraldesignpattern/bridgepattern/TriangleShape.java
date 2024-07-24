@@ -1,4 +1,5 @@
 package com.design.pattern.structuraldesignpattern.bridgepattern;
+
 public class TriangleShape extends Shape {
 
   public TriangleShape(Color color) {

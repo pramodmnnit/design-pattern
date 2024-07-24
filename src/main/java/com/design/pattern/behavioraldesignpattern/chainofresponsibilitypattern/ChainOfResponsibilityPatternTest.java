@@ -1,11 +1,17 @@
 package com.design.pattern.behavioraldesignpattern.chainofresponsibilitypattern;
 
-
 import java.util.Scanner;
 
+/**
+ * Chain of responsibility pattern is used to achieve loose coupling in software design where a
+ * request from client is passed to a chain of objects to process them. Then the object in the chain
+ * will decide themselves who will be processing the request and whether the request is required to
+ * be sent to the next object in the chain or not.
+ */
 public class ChainOfResponsibilityPatternTest {
 
   private final DispenseChain chain;
+
   public ChainOfResponsibilityPatternTest() {
     Dollar50Dispenser firstChain = new Dollar50Dispenser();
     Dollar20Dispenser secondChain = new Dollar20Dispenser();
@@ -15,8 +21,9 @@ public class ChainOfResponsibilityPatternTest {
     this.chain = firstChain;
   }
 
-  public static void main(String [] args){
-    ChainOfResponsibilityPatternTest responsibilityPatternTest = new ChainOfResponsibilityPatternTest();
+  public static void main(String[] args) {
+    ChainOfResponsibilityPatternTest responsibilityPatternTest =
+        new ChainOfResponsibilityPatternTest();
     while (true) {
       int amount;
       System.out.println("Enter amount to dispense");

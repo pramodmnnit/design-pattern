@@ -7,14 +7,14 @@ public class ChatMediatorImpl implements ChatMediator {
 
   private final List<User> users;
 
-  public ChatMediatorImpl(){
+  public ChatMediatorImpl() {
     users = new ArrayList<>();
   }
 
   @Override
   public void sendMessage(String message, User user) {
-    for(User each : users){
-      if(each != user){
+    for (User each : users) {
+      if (each != user) {
         each.receive(message);
       }
     }

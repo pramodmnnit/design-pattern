@@ -1,6 +1,6 @@
 package com.design.pattern.structuraldesignpattern.decoratorpattern;
 
-public class CarDecorator implements Car{
+public class CarDecorator implements Car {
 
   protected Car car;
 
@@ -12,5 +12,4 @@ public class CarDecorator implements Car{
   public void assemble() {
     this.car.assemble();
   }
-
 }

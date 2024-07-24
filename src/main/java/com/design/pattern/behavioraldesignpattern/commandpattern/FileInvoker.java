@@ -2,7 +2,7 @@ package com.design.pattern.behavioraldesignpattern.commandpattern;
 
 public class FileInvoker {
 
-  Command command;
+  private final Command command;
 
   public FileInvoker(Command command) {
     this.command = command;

@@ -7,25 +7,26 @@ public class Employee implements Cloneable {
 
   private final List<String> employees;
 
-  public Employee(List<String> employees){
-  this.employees =  employees;
+  public Employee(List<String> employees) {
+    this.employees = employees;
   }
 
-  public Employee(){
-    this.employees =  new ArrayList<>();
+  public Employee() {
+    this.employees = new ArrayList<>();
   }
 
-  public void loadEmployees(){
+  public void loadEmployees() {
     employees.add("Employee 1");
     employees.add("Employee 2");
     employees.add("Employee 3");
   }
 
-  public List<String> getEmployees(){
+  public List<String> getEmployees() {
     return employees;
   }
+
   @Override
-  public Object clone() throws CloneNotSupportedException{
+  public Object clone() {
     List<String> temp = new ArrayList<>(employees);
     return new Employee(temp);
   }
